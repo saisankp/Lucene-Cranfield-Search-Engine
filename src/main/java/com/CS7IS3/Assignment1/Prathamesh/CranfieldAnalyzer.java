@@ -15,8 +15,8 @@ import org.apache.lucene.analysis.standard.StandardTokenizer;
 import org.tartarus.snowball.ext.EnglishStemmer;
 
 public class CranfieldAnalyzer extends Analyzer {
-	@Override
 	// Using stop words from https://www.ranks.nl/stopwords
+	@Override
 	protected TokenStreamComponents createComponents(String fieldName) {
 		List<String> stopwords = Arrays.asList("a", "about", "above", "after", "again", "against", "all", "am", "an",
 				"and", "any", "are", "aren't", "as", "at", "be", "because", "been", "before", "being", "below",

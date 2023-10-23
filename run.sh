@@ -66,56 +66,56 @@ echo "Set_Recall: $standardLMJelinekMercerMultiFieldParserSetRecall"
 java -jar target/CS7IS3-Assignment1-Prathamesh-0.0.1-SNAPSHOT.jar --operation index CranfieldAnalyzer
 
 # Evaluate with my cranfield analyzer
-echo "StandardAnalyzer + BM25 + QueryParser"
+echo "CranfieldAnalyzer + BM25 + QueryParser"
 java -jar target/CS7IS3-Assignment1-Prathamesh-0.0.1-SNAPSHOT.jar --operation evaluate CranfieldAnalyzer BM25 QueryParser
 cranfieldBM25ParserMAP=$(./trec_eval-9.0.7/trec_eval -m map cranfield-collection/QRelsCorrectedforTRECeval evaluation/scores | grep -oE '[0-9]+([.][0-9]+)?')
 echo "MAP: $cranfieldBM25ParserMAP"
 cranfieldBM25ParserSetRecall=$(./trec_eval-9.0.7/trec_eval -m set_recall cranfield-collection/QRelsCorrectedforTRECeval evaluation/scores | grep -oE '[0-9]+([.][0-9]+)?')
 echo "Set_Recall: $cranfieldBM25ParserSetRecall"
 
-echo "StandardAnalyzer + BM25 + MultiFieldQueryParser"
+echo "CranfieldAnalyzer + BM25 + MultiFieldQueryParser"
 java -jar target/CS7IS3-Assignment1-Prathamesh-0.0.1-SNAPSHOT.jar --operation evaluate CranfieldAnalyzer BM25 MultiFieldQueryParser
 cranfieldBM25MultiFieldParserMAP=$(./trec_eval-9.0.7/trec_eval -m map cranfield-collection/QRelsCorrectedforTRECeval evaluation/scores | grep -oE '[0-9]+([.][0-9]+)?')
 echo "MAP: $cranfieldBM25MultiFieldParserMAP"
 cranfieldBM25MultiFieldParserSetRecall=$(./trec_eval-9.0.7/trec_eval -m set_recall cranfield-collection/QRelsCorrectedforTRECeval evaluation/scores | grep -oE '[0-9]+([.][0-9]+)?')
 echo "Set_Recall: $cranfieldBM25MultiFieldParserSetRecall"
 
-echo "StandardAnalyzer + VSM + QueryParser"
+echo "CranfieldAnalyzer + VSM + QueryParser"
 java -jar target/CS7IS3-Assignment1-Prathamesh-0.0.1-SNAPSHOT.jar --operation evaluate CranfieldAnalyzer VSM QueryParser
 cranfieldVSMParserMAP=$(./trec_eval-9.0.7/trec_eval -m map cranfield-collection/QRelsCorrectedforTRECeval evaluation/scores | grep -oE '[0-9]+([.][0-9]+)?')
 echo "MAP: $cranfieldVSMParserMAP"
 cranfieldVSMParserSetRecall=$(./trec_eval-9.0.7/trec_eval -m set_recall cranfield-collection/QRelsCorrectedforTRECeval evaluation/scores | grep -oE '[0-9]+([.][0-9]+)?')
 echo "Set_Recall: $cranfieldVSMParserSetRecall"
 
-echo "StandardAnalyzer + VSM + MultiFieldQueryParser"
+echo "CranfieldAnalyzer + VSM + MultiFieldQueryParser"
 java -jar target/CS7IS3-Assignment1-Prathamesh-0.0.1-SNAPSHOT.jar --operation evaluate CranfieldAnalyzer VSM MultiFieldQueryParser
 cranfieldVSMMultiFieldParserMAP=$(./trec_eval-9.0.7/trec_eval -m map cranfield-collection/QRelsCorrectedforTRECeval evaluation/scores | grep -oE '[0-9]+([.][0-9]+)?')
 echo "MAP: $cranfieldVSMMultiFieldParserMAP"
 cranfieldVSMMultiFieldParserSetRecall=$(./trec_eval-9.0.7/trec_eval -m set_recall cranfield-collection/QRelsCorrectedforTRECeval evaluation/scores | grep -oE '[0-9]+([.][0-9]+)?')
 echo "Set_Recall: $cranfieldVSMMultiFieldParserSetRecall"
 
-echo "StandardAnalyzer + LMDirichlet + QueryParser"
+echo "CranfieldAnalyzer + LMDirichlet + QueryParser"
 java -jar target/CS7IS3-Assignment1-Prathamesh-0.0.1-SNAPSHOT.jar --operation evaluate CranfieldAnalyzer LMDirichlet QueryParser
 cranfieldLMDirichletParserMAP=$(./trec_eval-9.0.7/trec_eval -m map cranfield-collection/QRelsCorrectedforTRECeval evaluation/scores | grep -oE '[0-9]+([.][0-9]+)?')
 echo "MAP: $cranfieldLMDirichletParserMAP"
 cranfieldLMDirichletParserSetRecall=$(./trec_eval-9.0.7/trec_eval -m set_recall cranfield-collection/QRelsCorrectedforTRECeval evaluation/scores | grep -oE '[0-9]+([.][0-9]+)?')
 echo "Set_Recall: $cranfieldLMDirichletParserSetRecall"
 
-echo "StandardAnalyzer + LMDirichlet + MultiFieldQueryParser"
+echo "CranfieldAnalyzer + LMDirichlet + MultiFieldQueryParser"
 java -jar target/CS7IS3-Assignment1-Prathamesh-0.0.1-SNAPSHOT.jar --operation evaluate CranfieldAnalyzer LMDirichlet MultiFieldQueryParser
 cranfieldLMDirichletMultiFieldParserMAP=$(./trec_eval-9.0.7/trec_eval -m map cranfield-collection/QRelsCorrectedforTRECeval evaluation/scores | grep -oE '[0-9]+([.][0-9]+)?')
 echo "MAP: $cranfieldLMDirichletMultiFieldParserMAP"
 cranfieldLMDirichletMultiFieldParserSetRecall=$(./trec_eval-9.0.7/trec_eval -m set_recall cranfield-collection/QRelsCorrectedforTRECeval evaluation/scores | grep -oE '[0-9]+([.][0-9]+)?')
 echo "Set_Recall: $cranfieldLMDirichletMultiFieldParserSetRecall"
 
-echo "StandardAnalyzer + LMJelinekMercer + QueryParser"
+echo "CranfieldAnalyzer + LMJelinekMercer + QueryParser"
 java -jar target/CS7IS3-Assignment1-Prathamesh-0.0.1-SNAPSHOT.jar --operation evaluate CranfieldAnalyzer LMJelinekMercer QueryParser
 cranfieldLMJelinekMercerParserMAP=$(./trec_eval-9.0.7/trec_eval -m map cranfield-collection/QRelsCorrectedforTRECeval evaluation/scores | grep -oE '[0-9]+([.][0-9]+)?')
 echo "MAP: $cranfieldLMJelinekMercerParserMAP"
 cranfieldLMJelinekMercerParserSetRecall=$(./trec_eval-9.0.7/trec_eval -m set_recall cranfield-collection/QRelsCorrectedforTRECeval evaluation/scores | grep -oE '[0-9]+([.][0-9]+)?')
 echo "Set_Recall: $cranfieldLMJelinekMercerParserSetRecall"
 
-echo "StandardAnalyzer + LMJelinekMercer + MultiFieldQueryParser"
+echo "CranfieldAnalyzer + LMJelinekMercer + MultiFieldQueryParser"
 java -jar target/CS7IS3-Assignment1-Prathamesh-0.0.1-SNAPSHOT.jar --operation evaluate CranfieldAnalyzer LMJelinekMercer MultiFieldQueryParser
 cranfieldLMJelinekMercerMultiFieldParserMAP=$(./trec_eval-9.0.7/trec_eval -m map cranfield-collection/QRelsCorrectedforTRECeval evaluation/scores | grep -oE '[0-9]+([.][0-9]+)?')
 echo "MAP: $cranfieldLMJelinekMercerMultiFieldParserMAP"

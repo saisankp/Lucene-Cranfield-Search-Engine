@@ -124,32 +124,25 @@ public class Visualize {
 				"CranfieldAnalyzer + LMJelinekMercer + MultiFieldQueryParser");
 
 		// Create chart based on the dataset
-		JFreeChart chart = ChartFactory.createBarChart("Evaluation of search engines", "", // X-Axis Label
-				"Score", // Y-Axis Label
-				dataset, PlotOrientation.HORIZONTAL, true, true, false);
-
+		JFreeChart chart = ChartFactory.createBarChart("Evaluation of search engines", "", "Score", dataset,
+				PlotOrientation.HORIZONTAL, true, true, false);
 		CategoryPlot plot = (CategoryPlot) chart.getPlot();
 		CategoryAxis xAxis = plot.getDomainAxis();
 		ValueAxis yAxis = plot.getRangeAxis();
-
 		BarRenderer renderer = (BarRenderer) plot.getRenderer();
-		renderer.setShadowVisible(false); // Disable shadows for bars
+		renderer.setShadowVisible(false);
 		renderer.setDrawBarOutline(true);
 		for (int i = 0; i < dataset.getRowCount(); i++) {
-			Paint black = Color.BLACK; // Set the outline color (black in this case)
+			Paint black = Color.BLACK;
 			renderer.setSeriesOutlinePaint(i, black);
-			renderer.setSeriesOutlineStroke(i, new BasicStroke(1.5f)); // Set the outline stroke width
+			renderer.setSeriesOutlineStroke(i, new BasicStroke(1.5f));
 		}
-
-		// Customize font size and style for category labels
 		Font boldFont = new Font("Serif", Font.BOLD, 13);
 		xAxis.setTickLabelFont(boldFont);
 		yAxis.setTickLabelFont(boldFont);
-
-		// Customize legend item graphic padding to provide space for longer labels
 		LegendTitle legend = chart.getLegend();
-		legend.setItemFont(new Font("Serif", Font.BOLD, 20)); // Set font size for legend labels
-		legend.setLegendItemGraphicPadding(new RectangleInsets(0, 10, 0, 10)); // Adjust padding around legend labels
+		legend.setItemFont(new Font("Serif", Font.BOLD, 20));
+		legend.setLegendItemGraphicPadding(new RectangleInsets(0, 10, 0, 10));
 
 		return chart;
 	}
