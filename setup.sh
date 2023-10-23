@@ -1,5 +1,5 @@
-sudo apt install make
 sudo apt update
+sudo apt install make
 sudo apt install build-essential
 sudo apt-get install maven
 mkdir -p cranfield-collection
