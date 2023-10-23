@@ -1,4 +1,3 @@
-sudo su -
 sudo apt install make
 sudo apt update
 sudo apt install build-essential
