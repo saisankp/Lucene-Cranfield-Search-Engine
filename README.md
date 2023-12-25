@@ -24,7 +24,12 @@ The project is already setup. But if you're curious, you can run the commands I 
 chmod +x setup.sh
 ./setup.sh
 ```
-Note: The QRELS file in the Cranfield Collection will not be in the correct format for trec_eval, so I got QRelsCorrectedforTRECeval instead from [here][link] (only Trinity College Dublin email addresses can access this Google Drive folder).
+
+# Useful information
+
+The QRELS file in the Cranfield Collection will not be in the correct format for trec_eval, so I got QRelsCorrectedforTRECeval instead from [here][link] (only Trinity College Dublin email addresses can access this Google Drive folder).
+
+Also, If you are setting up the git submodule for trec_eval for the first time, you may get a trec_eval.diff being tracked which won't go away. Simply make a .gitignore inside the trec_eval folder and put the wildcard '*' inside.
 
 # Results
 ![visualization](https://github.com/saisankp/Lucene-Cranfield-Search-Engine/assets/34750736/533a3528-d7cb-4805-8beb-784b8dc53e13)
