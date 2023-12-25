@@ -1,5 +1,5 @@
 # Apache Lucene Search Engine for the Cranfield Collection
-This project uses Java 1.8 and Apache Lucene 8.11.2 to index the Cranfield Collection, search the generated index and score my search engine using the queries provided in the Cranfield Collection.
+This project uses Java 1.8 and Apache Lucene 8.11.2 to index the Cranfield Collection, search the generated index and score my search engine using the queries provided in the Cranfield Collection. For details on my implementation, view my [report](https://github.com/saisankp/Lucene-Cranfield-Search-Engine/blob/main/report/report.pdf).
 
 # How to run the code
 ```
