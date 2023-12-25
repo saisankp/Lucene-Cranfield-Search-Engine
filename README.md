@@ -1,6 +1,17 @@
 # Apache Lucene Search Engine for the Cranfield Collection
 This project uses Java 1.8 and Apache Lucene 8.11.2 to index the [Cranfield Collection](https://ir.dcs.gla.ac.uk/resources/test_collections/cran/), search the generated index and score my search engine using the queries provided in the Cranfield Collection. For details on my implementation, view my [report](https://github.com/saisankp/Lucene-Cranfield-Search-Engine/blob/main/report/report.pdf).
 
+# Setting up trec_eval
+In this codebase, trec_eval is a git submodule. To setup trec_eval for your machine, run these commands:
+
+```
+git submodule update --init
+cd trec_eval
+make
+make quicktest
+cd ..
+```
+
 # How to run the code
 ```
 chmod +x run.sh
